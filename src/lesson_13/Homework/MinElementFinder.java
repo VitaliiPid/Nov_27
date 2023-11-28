@@ -1,7 +1,10 @@
 package lesson_13.Homework;
 
 public class MinElementFinder {
-
+    /*
+    Дан массив целых чисел. Написать метод, возвращающий наименьший элемент массива.
+    public static int findMin(int[] ints)
+     */
     public static void main(String[] args) {
         int[] array = {9, 14, 27, 3, 22, 7};
         int minElement = findMin(array);
