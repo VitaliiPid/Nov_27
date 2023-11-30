@@ -4,31 +4,24 @@ public class Homework_02 {
     public static void main(String[] args) {
 
         /*
-        написать метод, проверяющий равенство двух массивов целых чисел. В случае, если массивы равны, метод
-        возвращает true,  если нет то false. Массивы равны если они одинаковые
-        {1,2,3}
-        {1,2,3}
+        Есть массив целых чисел. Написать метод, находящий и возвращающий количество четных чисел в этом массиве.
+        Пример: {1, 2, 8, 7} -> количество четных чисел = 2.
         */
 
-        int[] array1 = {1, 2, 3};
-        int[] array2 = {1, 2, 3};
-
-        boolean result = areyEqual(array1, array2);
-        System.out.println("Массивы равны: " + result);
+        int[] array = {1, 2, 8, 7};
+        int count = countEvenNumbers(array);
+        System.out.println("Количество четных чисел в массиве: " + count);
     }
 
-    public static boolean areyEqual(int[] array1, int[] array2) {
+    public static int countEvenNumbers(int[] numbers) {
+        int evenCount = 0;
 
-        if (array1.length != array2.length) {
-            return false;
-        }
-
-        for (int i = 0; i < array1.length; i++) {
-            if (array1[i] != array2[i]) {
-                return false;
+        for (int number : numbers) {
+            if (number % 2 == 0) {
+                evenCount++;
             }
         }
 
-        return true;
+        return evenCount;
     }
 }
